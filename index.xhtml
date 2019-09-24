@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>Digibank</title>
+    </h:head>
+    <h:body>
+    	<h2>Welcome To Digibank</h2>
+    	<h:form>
+    		<h:panelGrid columns="2" >
+    		<h:outputLabel value="Name : "/>
+    	   <h:inputText value="#{usercontroller.userinfo.name}"></h:inputText>
+    	   <h:outputLabel value="SourcePassport : "/>
+    	   <h:inputText value="#{usercontroller.userinfo.sourcePassport}"></h:inputText>
+    	   <h:outputLabel value="DestinationPassport: "/>
+    	   <h:inputText value="#{usercontroller.userinfo.destinationPassport}"></h:inputText>
+           <h:outputLabel value="DestinationBank: "/>
+           <h:inputText value="#{usercontroller.userinfo.destinationBank}"></h:inputText>
+           <h:outputLabel value="DestinationCountry: "/>
+           <h:inputText value="#{usercontroller.userinfo.destinationCountry}"></h:inputText>
+           <h:outputLabel value="AccountNumber: "/>
+           <h:inputText value="#{usercontroller.userinfo.accountNumber}"></h:inputText>
+    	  <h:outputLabel value="Amount: "/>
+           <h:inputText value="#{usercontroller.userinfo.amount}"></h:inputText>
+           <h:outputLabel value="TransactionCode: "/>
+           <h:inputText value="#{usercontroller.userinfo.transactionCode}"></h:inputText>
+    	   </h:panelGrid>
+    	   <h:commandButton value="submit" action="#{usercontroller.addNewUser}"></h:commandButton>
+    	</h:form>
+    </h:body>
+</html>
+
